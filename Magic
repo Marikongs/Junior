@@ -1,0 +1,29 @@
+
+import bpy
+
+from random import randint
+
+# Clear existing animation data
+
+bpy.ops.object.select_all(action='DESELECT')
+
+bpy.ops.object.select_by_type(type='MESH')
+
+bpy.ops.object.delete(use_global=False)
+
+
+
+# Create two cubes
+
+bpy.ops.mesh.primitive_cube_add(size=1, location=(-2, 0, 0))
+
+cube1 = bpy.context.object
+
+bpy.ops.mesh.primitive_cube_add(size=1, location=(2, 0, 0))
+
+cube2 = bpy.context.object
+
+
+
+
+
